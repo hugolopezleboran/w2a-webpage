@@ -221,7 +221,7 @@ async function iniciar() {
 
     
 
-    let urlItems = `http://ddragon.leagueoflegends.com/cdn/13.21.1/data/es_ES/item.json`
+    let urlItems = `https://ddragon.leagueoflegends.com/cdn/13.21.1/data/es_ES/item.json`
     let json = await cargarUrl(urlItems)
 
     delete(json.data)["3901"]
@@ -262,7 +262,7 @@ async function clickBoton() {
     let personaje = document.getElementById('selectPersonaje').value
     let items = document.getElementById('selectItem').value
     
-    let urlPersonajes = `http://ddragon.leagueoflegends.com/cdn/13.19.1/data/es_ES/champion/${personaje}.json`
+    let urlPersonajes = `https://ddragon.leagueoflegends.com/cdn/13.19.1/data/es_ES/champion/${personaje}.json`
     let jsonPersonajes = await cargarUrl(urlPersonajes)
     
     let estadisticas = jsonPersonajes.data[personaje].stats
