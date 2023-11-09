@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 60px;
+    background-color: white;
+    padding: 10px 30px;
+    box-shadow: 0 3px 13px 1px black;
+}
+
+.contenedor-p {
+    min-height: 25vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenedor {
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-calculadora {
+    width: 1800px;
+    height: 950px;
+    margin: 200px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f6f7;
+    box-shadow: 0 3px 13px 1px #efb810;
+    font-size: 20px;
+
+}
+
+.contenedor-input {
+    padding-right: 300px;
+
+}
+
+.contenedor-seleccion {
+    background-color: white;
+    margin-top: 30px;
+
+    box-shadow: 0 3px 13px 1px black;
+}
+
+.contenedor-estadisticas {
+    background-color: white;
+    margin-top: 30px;
+    box-shadow: 0 3px 13px 1px black;
+    padding: 30px 40px;
+}
+
+ul {
+    font-size: 30px;
+    list-style: none;
+}
+
+#btnCargar {
+    font-size: 30px;
+    color: white;
+    border-radius: 20px;
+    background-color: black;
+    margin: 40px;
+    padding: 10px 30px;
+    box-shadow: 0 3px 13px 1px black;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnCargar:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+#selectItem {
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    background-color: black;
+    margin: 40px;
+    padding: 10px 30px;
+    box-shadow: 0 3px 13px 1px black;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#selectNivel {
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    background-color: black;
+    margin: 40px;
+    padding: 10px 30px;
+    box-shadow: 0 3px 13px 1px black;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+#selectPersonaje {
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    background-color: black;
+    margin: 40px;
+    padding: 10px 30px;
+    box-shadow: 0 3px 13px 1px black;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+b {
+    font-size: 30px;
+
+}
+
+.texto-personajes {
+    padding-right: 160px;
+}
+
+.texto-nivel {
+    padding-right: 280px;
+}
+
+span {
+    font-weight: bold;
+    font-size: 30px;
+}

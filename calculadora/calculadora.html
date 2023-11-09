@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas personajes</title>
+    <link rel="stylesheet" href="stylescal.css">
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="icon" href="" type="image/png">
+</head>
+
+<body>
+    <nav>
+
+        <input type="checkbox" id="toggle">
+        <div class="logo">
+            <img src="/imagenes/Logo W2A simple (sin fondo).png" alt="" width="60px">
+        </div>
+        <ul class="list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#">Quienes somos?</a></li>
+            <li><a href="#">Streaming</a></li>
+            <li><a href="../casters/casters.html">Casters</a></li>
+            <li><a href="#">Calculadora de estadísticas</a></li>
+        </ul>
+        <label for="toggle" class="icon-bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    <div class="contenedor-p">
+        <div class="contenedor">
+            <div class="contenedor-calculadora">
+                <div class="contenedor-input">
+                    
+                    <br>
+                    <h1>ESTADÍSTICAS PERSONAJES</h1>
+
+                    <div class="contenedor-seleccion">
+                        <b class="texto-personajes">Personajes:</b>
+                        <select id="selectPersonaje">
+                        </select>
+                        <br />
+                        <b class="texto-nivel">Nivel:</b>
+                        <select id="selectNivel"></select>
+                        <br />
+                        <b class="texto-objetos">Objetos:</b>
+                        <select id="selectItem"></select>
+                        <br />
+                        <button id="btnCargar">Cargar Estadísticas</button>
+                    </div>
+                </div>
+
+                <div class="contenedor-estadisticas">
+                    <ul class="lista-estadisticas">
+                        <li class="lista">Vida: <span id="hp"></span></li>
+                        <li>Vida por nivel: <span id="hpperlevel"></span></li>
+                        <li>Mana: <span id="mp"></span></li>
+                        <li>Mana por nivel: <span id="mpperlevel"></span></li>
+                        <li>Velocidad de movimiento: <span id="movespeed"></span></li>
+                        <li>Armadura: <span id="armor"></span></li>
+                        <li>Armadura por nivel: <span id="armorperlevel"></span></li>
+                        <li>Resistencia mágica: <span id="spellblock"></span></li>
+                        <li>Resistencia mágica por nivel: <span id="spellblockperlevel"></span></li>
+                        <li>Rango de ataque: <span id="attackrange"></span></li>
+                        <li>Regeneración de vida: <span id="hpregen"></span></li>
+                        <li>Regeneración de vida por nivel: <span id="hpregenperlevel"></span></li>
+                        <li>Regeneración de mana: <span id="mpregen"></span></li>
+                        <li>Regeneración de mana por nivel: <span id="mpregenperlevel"></span></li>
+                        <li>Crítico: <span id="crit"></span></li>
+                        <li>Crítico por nivel: <span id="critperlevel"></span></li>
+                        <li>Daño de ataque: <span id="attackdamage"></span></li>
+                        <li>Daño de ataque por nivel: <span id="attackdamageperlevel"></span></li>
+                        <li>Velocidad de ataque: <span id="attackspeed"></span></li>
+                        <li>Velocidad de ataque por nivel: <span id="attackspeedperlevel"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div> 
+    <footer class="footer">
+        <div class="logos-derecha">
+            <a href="https://twitter.com/w2avalanche" target="_blank"><img src="../imagenes/X_logo_2023_(white).png"
+                    alt="" width="80px"></a>
+            <a href="https://www.twitch.tv/w2atv" target="_blank" class="logo-twitch"><img
+                    src="/imagenes/pngimg.com - twitch_PNG39.png" alt="" width="80px"></a>
+        </div>
+        <img src="../imagenes/sponsors (1).png" alt="">
+        <a href="" target="_blank" class="logo-x"><img
+                src="/imagenes/kisspng-paper-black-and-white-logo-pattern-youtube-play-button-5a771b86644a00.7236911315177552704108.png"
+                alt="" width="100px"></a>
+        <a href="" class="logo-instagram"><img src="../imagenes/pngtree-instagram-white-icon-png-image_3570433.jpg"
+                alt="" width="100px"></a>
+    </footer>   
+        <script src="calculadoraapp.js"></script>
+</body>
+
+</html>
