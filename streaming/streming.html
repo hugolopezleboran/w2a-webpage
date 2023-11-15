@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming</title>
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="streaming.css">
+</head>
+
+<body>
+    <nav>
+
+        <input type="checkbox" id="toggle">
+        <div class="logo">
+            <img src="/imagenes/Logo W2A simple (sin fondo).png" alt="" width="60px">
+        </div>
+        <ul class="list">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="#">Quienes somos?</a></li>
+            <li><a href="#">Streaming</a></li>
+            <li><a href="/casters/casters.html">Casters</a></li>
+            <li><a href="/calculadora/calculadora.html">Calculadora de estadísticas</a></li>
+        </ul>
+        <label for="toggle" class="icon-bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    <main>
+        <div class="contenedor-general">
+            <div class="contenedor-blue">
+                <h1 id="h1-azul">EQUIPO AZUL</h1>
+                <input class="input-blue" id="input-blue-equipo" placeholder="Ingresa Equipo" type="text"> <br>
+                <input class="input-blue" id="input-blue-top" placeholder="Ingresa TOP" type="text"> <br>
+                <input class="input-blue" id="input-blue-jungla" placeholder="Ingresa Jungla" type="text"> <br>
+                <input class="input-blue" id="input-blue-mid" placeholder="Ingresa MID" type="text"> <br>
+                <input class="input-blue" id="input-blue-adc" placeholder="Ingresa ADC" type="text"> <br>
+                <input class="input-blue" id="input-blue-suport" placeholder="Ingresa Suport" type="text"> <br>
+                <input class="input-blue" id="input-blue-logo" placeholder="Logo Equipo Azul" type="url"> <br>               
+                
+            </div>
+            <div class="contenedor-red">
+                <h1 id="h1-rojo">EQUIPO ROJO</h1>
+                <input class="input-red" id="input-red-equipo" placeholder="Ingresa Equipo" type="text"> <br>
+                <input class="input-red" id="input-red-top" placeholder="Ingresa TOP" type="text"> <br>
+                <input class="input-red" id="input-red-jungla" placeholder="Ingresa Jungla" type="text"><br>
+                <input class="input-red" id="input-red-mid" placeholder="Ingresa MID" type="text"><br>
+                <input class="input-red" id="input-red-adc" placeholder="Ingresa ADC" type="text"><br>
+                <input class="input-red" id="input-red-suport" placeholder="Ingresa Suport" type="text"><br>
+                <input class="input-red" id="input-red-logo" placeholder="Logo Equipo Rojo" type="url"> 
+            </div>
+            <div class="contenedor-info">
+                <input class="input-info" id="input-nombre-torneo" placeholder="Nombre Del Torneo" type="text"> <br>
+                <input class="input-info" id="input-logo-torneo" placeholder="Logo Del Torneo" type="url"> <br>
+                <input class="input-info" id="input-dawe" placeholder="Ingresa Dawe" type="text"> <br>
+                <button type="submit" id="btn-azul">Cargar</button>
+            </div>
+        </div> <br>
+        
+    </main>
+    <script src="streaming.js"></script>
+</body>
+
+</html>

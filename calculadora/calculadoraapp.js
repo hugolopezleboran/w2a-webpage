@@ -1,13 +1,14 @@
 window.onload = iniciar
 
 let inputObjetos = document.getElementById('selectItem');
-inputObjetos.addEventListener('click', (e) => {
-    alert("Los objetos no están disponibles, estamos trabajando en ellos, gracias por la paciencia")
-
-})
+//inputObjetos.addEventListener('click', (e) => {
+ //   alert("Los objetos no están disponibles, estamos trabajando en ellos, gracias por la paciencia")
+//
+//})
 async function iniciar() {
     let boton = document.getElementById("btnCargar");
     boton.addEventListener('click', clickBoton)
+    
     
     //Campeones
     const lista_campeones = [
@@ -247,7 +248,7 @@ async function iniciar() {
         option.value = item;
         option.text = item.name
         
-        //console.log(item)
+        //console.log(item.stats)
         selectItem.appendChild(option)
     }
     
@@ -257,6 +258,11 @@ async function cargarUrl(url) {
     let response = await fetch(url);
     return response.json();
 }
+    async function cargarUrl(urlItems) {
+        let response = await fetch(urlItems);
+        return response.json();
+}
+
 async function clickBoton() {
     let nivel = document.getElementById('selectNivel').value
     let personaje = document.getElementById('selectPersonaje').value
@@ -264,8 +270,21 @@ async function clickBoton() {
     
     let urlPersonajes = `https://ddragon.leagueoflegends.com/cdn/13.19.1/data/es_ES/champion/${personaje}.json`
     let jsonPersonajes = await cargarUrl(urlPersonajes)
-    
+
     let estadisticas = jsonPersonajes.data[personaje].stats
+
+    //let urlItems = `https://ddragon.leagueoflegends.com/cdn/13.21.1/data/es_ES/item/${items}.json`
+    //let jsonItems = await cargarUrl(urlItems)
+
+    
+    //let estadisticasObjetos = jsonItems.data[items]
+    //console.log(estadisticasObjetos)
+
+    
+
+
+    
+    
     //let estadisticas1 = itemsArray[items].stats
     
 
@@ -275,24 +294,24 @@ async function clickBoton() {
     //console.log(urlItems)
 
     
-    document.getElementById('hp').innerHTML = Math.round(estadisticas.hp+(estadisticas.hpperlevel*nivel))//+estadisticas1.FlatMPPoolMod
+    document.getElementById('hp').innerHTML = Math.round(estadisticas.hp+(estadisticas.hpperlevel*nivel))//+estadisticasObjetos.FlatMPPoolMod
     document.getElementById('hpperlevel').innerHTML = Math.round(estadisticas.hpperlevel)
     document.getElementById('mp').innerHTML = Math.round(estadisticas.mp+(estadisticas.mpperlevel*nivel))
     document.getElementById('mpperlevel').innerHTML = Math.round(estadisticas.mpperlevel)
     document.getElementById('movespeed').innerHTML = Math.round(estadisticas.movespeed)
-    document.getElementById('armor').innerHTML = Math.round(estadisticas.armor+(estadisticas.armorperlevel*nivel))
-    document.getElementById('armorperlevel').innerHTML = Math.round(estadisticas.armorperlevel)
-    document.getElementById('spellblock').innerHTML = Math.round(estadisticas.spellblock+(estadisticas.spellblockperlevel*nivel))
-    document.getElementById('spellblockperlevel').innerHTML = Math.round(estadisticas.spellblockperlevel)
-    document.getElementById('hpregen').innerHTML = Math.round(estadisticas.hpregen+(estadisticas.hpregen*nivel))
-    document.getElementById('hpregenperlevel').innerHTML = Math.round(estadisticas.hpregenperlevel)
+    document.getElementById('armor').innerHTML = estadisticas.armor+(estadisticas.armorperlevel*nivel)
+    document.getElementById('armorperlevel').innerHTML = estadisticas.armorperlevel
+    document.getElementById('spellblock').innerHTML = estadisticas.spellblock+(estadisticas.spellblockperlevel*nivel)
+    document.getElementById('spellblockperlevel').innerHTML = estadisticas.spellblockperlevel
+    document.getElementById('hpregen').innerHTML = estadisticas.hpregen+(estadisticas.hpregen*nivel)
+    document.getElementById('hpregenperlevel').innerHTML = estadisticas.hpregenperlevel
     document.getElementById('attackrange').innerHTML = Math.round(estadisticas.attackrange)
-    document.getElementById('mpregen').innerHTML = Math.round(estadisticas.mpregenperlevel+(estadisticas.mpregenperlevel*nivel))
-    document.getElementById('mpregenperlevel').innerHTML = Math.round(estadisticas.mpregenperlevel)
+    document.getElementById('mpregen').innerHTML = estadisticas.mpregenperlevel+(estadisticas.mpregenperlevel*nivel)
+    document.getElementById('mpregenperlevel').innerHTML = estadisticas.mpregenperlevel
     document.getElementById('crit').innerHTML = Math.round(estadisticas.crit)
     document.getElementById('critperlevel').innerHTML = Math.round(estadisticas.critperlevel)
-    document.getElementById('attackdamage').innerHTML = Math.round(estadisticas.attackdamage+(estadisticas.attackdamageperlevel*nivel))
-    document.getElementById('attackdamageperlevel').innerHTML = Math.round(estadisticas.attackdamageperlevel)
+    document.getElementById('attackdamage').innerHTML = estadisticas.attackdamage+(estadisticas.attackdamageperlevel*nivel)
+    document.getElementById('attackdamageperlevel').innerHTML = estadisticas.attackdamageperlevel
     document.getElementById('attackspeedperlevel').innerHTML = estadisticas.attackspeedperlevel
     document.getElementById('attackspeed').innerHTML = estadisticas.attackspeed+estadisticas.attackspeed*estadisticas.attackspeedperlevel/100*nivel
 }
